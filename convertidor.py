@@ -6,6 +6,8 @@ Bienvenido al covertidor de moneda
 
 Elige una opción: """
 
+
+"""
 opcion = int(input(menu))
 
 if opcion == 1:
@@ -35,3 +37,27 @@ elif opcion == 3:
 else:
     print("Ingresa una opción correcta por favor")
 
+"""
+ # Vamos hacer nuestro comvertidor de moneda, con funciones con el objetivo de reducir código
+
+ # Primero vamos a definir nuestra función 
+def convertidor(valor, mensaje):
+    pesos = input("¿Cuántos pesos "+ mensaje + " tiene?: ")
+    pesos = float(pesos)
+    valor_dolar =  valor
+    dolares = pesos / valor_dolar
+    dolares = round(dolares,2)
+    dolares = str(dolares)
+    print("Tienes  $" + dolares + " dólares") 
+
+# Ahora vamos aplicar nuesstra función 
+opcion = int(input(menu))
+
+if opcion == 1:
+    convertidor(3875, "Colombianos")
+elif opcion == 2:
+    convertidor(103.15, "Argentinos")
+elif opcion == 3:
+    convertidor(20.45, "Mexicanos")
+else:
+    print("Ingresa una opción correcta por favor")
